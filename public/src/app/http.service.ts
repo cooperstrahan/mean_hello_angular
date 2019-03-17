@@ -10,7 +10,9 @@ export class HttpService {
     // this.getTask('5c8ac89e8d40f8624dbc343c');
     // this.deleteTask('');
   }
-
+  getPokemon(){
+    return this._http.get('https://pokeapi.co/api/v2/pokemon/4/');
+  }
   getTasks(){
     return this._http.get('/tasks');
   }
@@ -20,5 +22,6 @@ export class HttpService {
   deleteTask(id: string){
     return this._http.delete('/tasks'+id);
   }
+  
 }
 
