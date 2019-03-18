@@ -13,6 +13,9 @@ export class HttpService {
   getPokemon(){
     return this._http.get('https://pokeapi.co/api/v2/pokemon/4/');
   }
+  getAbility(url){
+    return this._http.get(url);
+  }
   getTasks(){
     return this._http.get('/tasks');
   }
